@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lobby360</title>
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-layout-component@4.x.x/dist/aframe-layout-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-event-set-component@5.x.x/dist/aframe-event-set-component.min.js"></script>
-     <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.jss"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puerta Oficina</title>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-layout-component@4.x.x/dist/aframe-layout-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@5.x.x/dist/aframe-event-set-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.jss"></script>
+  <script>
+    AFRAME.registerComponent("mylink", {
+      init: function() {
+        this.el.addEventListener("click", (e) => {
+          window.location = this.data.href;
+        })
+      }
+    })
+  </script>
 </head>
+
 <body>
-    <a-scene>
-        <a-sky src="img-hdr\Lobby360.jpg" rotation="0 0 0"></a-sky>
-  
-        <a-text font="kelsonsans" value="Lobby del Edificio" width="4" position="2.5 0.5 -0.8"
-                rotation="0 -90 0"></a-text>
-      </a-scene>
+  <a-scene cursor="rayOrigin: mouse">
+    <a-assets>
+    </a-assets>
+      <a-sky src="img-hdr\PuertaOficina360.jpg" rotation="0 0 0"></a-sky>
+      <a-text font="kelsonsans" value="Puerta de la Oficina" width="4" position="-1.5 1.2 -1.1" rotation="0 92 0">
+      </a-text>
+      <a-camera>
+      </a-camera>
+  </a-scene>
+
 </body>
+
 </html>
