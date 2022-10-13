@@ -19,6 +19,7 @@
         })
       }
     })
+
   </script>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -33,6 +34,10 @@
       <a-sky src="img-hdr\Lobby360.jpg" rotation="0 0 0"></a-sky>
       <a-text font="kelsonsans" value="Lobby del Edificio" width="4" position="2.5 0.5 -0.8" rotation="0 -90 0">
       </a-text>
+      <a-torus opacity="0.5" color="#FFFFFF" arc="360" radius="0.8" radius-tubular="1" position="-2 -0.2 -1.6" rotation="90 0 0" scale="0.05 0.05 0.001"
+      event-set__enter="_event: mouseenter; color: #026fc9"
+      event-set__leave="_event: mouseleave; color: #FFFFFF"
+      mylink="href: https://hennystous.github.io/Pagina360-Demo/ascensor.html;"></a-torus>
       <a-camera>
       </a-camera>
   </a-scene>

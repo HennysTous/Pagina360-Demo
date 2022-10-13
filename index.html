@@ -1,221 +1,49 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)https://getbootstrap.com/docs/5.2/examples/album/ -->
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour360</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+        <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-layout-component@4.x.x/dist/aframe-layout-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@5.x.x/dist/aframe-event-set-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.jss"></script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  
-  <title>Pagina360</title>
+</head>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <meta name="theme-color" content="#712cf9">
+<body class="bg-dark bg-gradient">
+    <div class="container text-center">
+        <div class="row text-center">
+            <div class="col py-5">
+                <div class="btn-group-horizontal" role="group" aria-label="Vertical button group">
+                    <button type="button" onclick="document.getElementById('frame360').src = 'https://hennystous.github.io/Pagina360-Demo/lobby.html'" class="btn btn-primary mx-2">Lobby</button>
+                    <button type="button" onclick="document.getElementById('frame360').src = 'https://hennystous.github.io/Pagina360-Demo/ascensor.html'" class="btn btn-primary mx-2">Ascensor</button>
+                    <button type="button" onclick="document.getElementById('frame360').src = 'https://hennystous.github.io/Pagina360-Demo/Piso7-1.html'" class="btn btn-primary mx-2">Piso 7-1</button>
+                    <button type="button" onclick="document.getElementById('frame360').src = 'https://hennystous.github.io/Pagina360-Demo/Piso7-2.html'" class="btn btn-primary mx-2">Piso 7-2</button>
+                    <button type="button" onclick="document.getElementById('frame360').src = 'https://hennystous.github.io/Pagina360-Demo/PuertaOficina.html'" class="btn btn-primary mx-2">Puerta de la Oficina</button>
+                    <button type="button" onclick="document.getElementById('frame360').src = 'https://hennystous.github.io/Pagina360-Demo/Oficina1.html'" class="btn btn-primary mx-2">Oficina 1</button>
+                    <button type="button" onclick="document.getElementById('frame360').src = 'https://hennystous.github.io/Pagina360-Demo/Oficina2.html'" class="btn btn-primary mx-2">Oficina 2</button>
+                    <button type="button" onclick="document.getElementById('frame360').src = 'https://hennystous.github.io/Pagina360-Demo/Oficina3.html'" class="btn btn-primary mx-2">Oficina 3</button>
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col">
+                    <iframe id="frame360" src="https://hennystous.github.io/Pagina360-Demo/lobby.html" frameBorder="1" width="100%"
+                        height="600px" style="border: 5px solid white; border-radius: 10px;"></iframe>
+                </div>
+            </div>
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-
-    .b-example-divider {
-      height: 3rem;
-      background-color: rgba(0, 0, 0, .1);
-      border: solid rgba(0, 0, 0, .15);
-      border-width: 1px 0;
-      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-    }
-
-    .b-example-vr {
-      flex-shrink: 0;
-      width: 1.5rem;
-      height: 100vh;
-    }
-
-    .bi {
-      vertical-align: -.125em;
-      fill: currentColor;
-    }
-
-    .nav-scroller {
-      position: relative;
-      z-index: 2;
-      height: 2.75rem;
-      overflow-y: hidden;
-    }
-
-    .nav-scroller .nav {
-      display: flex;
-      flex-wrap: nowrap;
-      padding-bottom: 1rem;
-      margin-top: -1px;
-      overflow-x: auto;
-      text-align: center;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
-  </style>
-
-<body>
-  <header>
-    <div class="navbar shadow-sm" style="background-color:#46a7ed;">
-      <div class="container">
-        <a href="index.html" class="navbar-brand d-flex align-items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
-            viewBox="0 0 24 24">
-            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-            <circle cx="12" cy="13" r="4"></circle>
-          </svg>
-          <div class="text-start">Tour Virtual - LSV Cartagena</div>
-        </a>
-
-      </div>
-    </div>
-  </header>
-
-  <main id="main" class="bg-dark bg-gradient">
-
-    <section class="py-5 text-center container">
-      <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <img src="img-hdr\thumbnails\Logo_VR-AR5-05.png" class="img-fluid" alt="LogoVr" width="200px" height="200px">
-          <h1 class="text-white">¡Bienvenido a nuestras oficinas!</h1>
-          <p class="lead text-light">Se participe de este tour virtual por nuestras instalaciones en la ciudad de
-            Cartagena de Indias.</p>
         </div>
-      </div>
-    </section>
-
-    <div class="album py-5">
-      <div class="container">
-
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="img-hdr\Lobby360.jpg" class="img-fluid" alt="Lobby360">
-
-              <div class="card-body">
-                <p class="card-text text-center">Lobby del edificio Banco Popular.</p>
-                <div class="d-flex justify-content-center">
-                  <a href="lobby.html"><button type="button" class="btn btn-outline-primary">Ver en
-                      360</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="img-hdr\Ascensor360.jpg" class="img-fluid" alt="Ascensor360">
-              <div class="card-body">
-                <p class="card-text text-center">Ascensor del edificio.</p>
-                <div class="d-flex justify-content-center">
-                  <a href="ascensor.html"><button type="button" class="btn btn-outline-primary">Ver en 360</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="img-hdr\Piso7-1 360.jpg" class="img-fluid" alt="Piso7-1">
-              <div class="card-body">
-                <p class="card-text text-center">Primera vista del 7mo piso.</p>
-                <div class="d-flex justify-content-center">
-                  <a href="Piso7-1.html"><button type="button" class="btn btn-outline-primary">Ver en 360</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="img-hdr\Piso7-2 360.jpg" class="img-fluid" alt="Piso7-2">
-              <div class="card-body">
-                <p class="card-text text-center">Segunda vista del 7mo piso.</p>
-                <div class="d-flex justify-content-center">
-                  <a href="Piso7-2.html"><button type="button" class="btn btn-outline-primary">Ver en 360</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="img-hdr\PuertaOficina360.jpg" class="img-fluid" alt="PuertaOficina360">
-              <div class="card-body">
-                <p class="card-text text-center">La entrada de nuestras oficinas.</p>
-                <div class="d-flex justify-content-center">
-                  <a href="PuertaOficina.html"><button type="button" class="btn btn-outline-primary">Ver en 360</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="img-hdr\Oficina1 360.jpg" class="img-fluid" alt="Oficina1">
-              <div class="card-body">
-                <p class="card-text text-center">El primer bloque de nuestra Oficina.</p>
-                <div class="d-flex justify-content-center">
-                  <a href="Oficina1.html"><button type="button" class="btn btn-outline-primary">Ver en 360</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="img-hdr\Oficina2 360.jpg" class="img-fluid" alt="Oficina2">
-              <div class="card-body">
-                <p class="card-text text-center">El segundo bloque de nuestra Oficina.</p>
-                <div class="d-flex justify-content-center">
-                  <a href="Oficina2.html"><button type="button" class="btn btn-outline-primary">Ver en 360</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="img-hdr\Oficina3 360.jpg" class="img-fluid" alt="Oficina3">
-              <div class="card-body">
-                <p class="card-text text-center">El tercer bloque de nuestra Oficina.</p>
-                <div class="d-flex justify-content-center">
-                  <a href="Oficina3.html"><button type="button" class="btn btn-outline-primary">Ver en 360</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-
-  </main>
-
-  <footer class="text-muted py-5">
-    <div class="container">
-      <p class="float-end mb-1">
-        <a href="#main">Arriba</a>
-      </p>
-      <p class="mb-1">Propiedad de LSV Tech y del equipo de VR-AR</p>
-    </div>
-  </footer>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
